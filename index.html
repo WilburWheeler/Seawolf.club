@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seawolf.club</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #1a3a5f;
+        }
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.1);
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px 20px;
+            color: white;
+            text-shadow: 3px 3px 0px #005073, 5px 5px 15px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            font-size: 5rem;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            letter-spacing: -2px;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 20px auto 40px;
+            max-width: 700px;
+            padding: 0 20px;
+        }
+
+        #articleSearch {
+            width: 100%;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            border: 2px solid #0077b6;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            outline: none;
+            color: #1a3a5f;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .captain-log {
+            background: rgba(253, 252, 240, 0.92);
+            backdrop-filter: blur(5px);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid rgba(212, 197, 161, 0.5);
+            margin-bottom: 50px;
+        }
+
+        .gallery-btn-wrapper {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .gallery-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #0077b6;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0,119,182,0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .gallery-btn:hover {
+            background: #d35400;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(211,84,0,0.4);
+        }
+
+        /* Form Styling */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-family: sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            color: #d35400;
+            border-bottom: 3px dashed #d35400;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .article-link {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            border-bottom: 4px solid #0077b6;
+        }
+
+        .article-link:hover {
+            transform: translateY(-8px) rotate(2deg);
+            background-color: rgba(255, 249, 230, 0.95);
+            border-bottom: 4px solid #d35400;
+        }
+
+        footer {
+            background: rgba(0, 35, 68, 0.9);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            margin-top: 80px;
+        }
+
+        .ship-wheel { font-size: 50px; display: block; }
+        .hidden { display: none !important; }
+
+        @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <header>
+        <span class="ship-wheel">☸</span>
+        <h1>Seawolf.club</h1>
+        <p style="font-size: 1.4rem;">The 30-Year Logbook of Peter & Gill Pitcher</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="articleSearch" placeholder="🔍 Search our adventures (Norway, Paris, Rhine)...">
+    </div>
+
+    <div class="container">
+        <section class="captain-log">
+            <p>My wife, Gill and I, have spent the past thirty summers exploring on the power boats we have owned, one <strong>Birchwood</strong> and three <strong>Brooms</strong>. All were named <strong>Seawolf</strong>.</p>
+            <p>We have written many articles about our adventures, which we hope you will enjoy. The articles are divided into 4 sections below.</p>
+            
+            <div class="gallery-btn-wrapper">
+                <a href="gallery.html" class="gallery-btn">📸 View the Photo Gallery</a>
+            </div>
+
+            <p style="font-family: 'Brush Script MT', cursive; font-size: 2rem; text-align: right; margin-bottom: 0;">Peter and Gill Pitcher</p>
+        </section>
+
+        <h2 class="section-title">⚓ Broom Boat Owners: 'Sweeping Statements'</h2>
+        <div class="grid">
+            <a href="https://www.canva.com/design/DAF3zP57XUM/eHXljeQUXuZ32Z03PyejdA/view" target="_blank" class="article-link">Sweeping Statements</a>
+            <a href="https://www.canva.com/design/DAF3zJiI6u8/lEbWCogDCINfieKLrYW0Xw/view" target="_blank" class="article-link">Our ideal boat</a>
+            <a href="https://www.canva.com/design/DAF3zK5cI3Y/NqRcYOW5VK2zKP5zFyeldg/view" target="_blank" class="article-link">The Ijsselmeer</a>
+            <a href="https://www.canva.com/design/DAF3zHSszkI/D2UTsjQvrkBsXmExooFwlg/view" target="_blank" class="article-link">Memorial Trophy</a>
+            <a href="https://www.canva.com/design/DAF3zJUwNzM/_h1tZMeXgUiCyazta_gnXQ/view" target="_blank" class="article-link">The Friesland Islands</a>
+            <a href="https://www.canva.com/design/DAF3zLA1c1g/view" target="_blank" class="article-link">From Brussels to Paris</a>
+            <a href="https://www.canva.com/design/DAF3zOFuCiY/9qA2GWPk0Gw2dBtRNkpLpw/view" target="_blank" class="article-link">Telemark Canals</a>
+            <a href="https://www.canva.com/design/DAF3zIJJ2FU/zI39hLyy0OfLbIUtgQJGeg/view" target="_blank" class="article-link">To Switzerland</a>
+            <a href="https://www.canva.com/design/DAF3zIED6fY/xIxCGcgfNWQI1l8eJDhR7g/view" target="_blank" class="article-link">Cruising with grand-children</a>
+            <a href="https://www.canva.com/design/DAF3zIVPe0A/lhtAeCgY5PGsFQeyQxgmwg/view" target="_blank" class="article-link">To Berlin and Back</a>
+            <a href="https://www.canva.com/design/DAF3zJZjJLE/3ARCPkrs_TtJdBa9bdQlSA/view" target="_blank" class="article-link">Dinghies to Cruises - our boats</a>
+            <a href="https://www.canva.com/design/DAF3zBBXsgw/p8lNDJlArHSJ03tWDjykHQ/view" target="_blank" class="article-link">Olso to the baltic - Gota Canal</a>
+            <a href="https://www.canva.com/design/DAF36boBa8c/p2SGxXtytl0Mc8CwADIwHg/view" target="_blank" class="article-link">Destination Norway. Delfzijl To Hamburg</a>
+            <a href="https://www.canva.com/design/DAF36U6RBjA/RVIBIuSzqf8xeQOJbqD5Nw/view" target="_blank" class="article-link">Hamburg to Denmark</a>
+            <a href="https://www.canva.com/design/DAF36dvJIDQ/WPkkJwS7Qvc2uuiT5cP3-w/view" target="_blank" class="article-link">East Coast Denmark</a>
+            <a href="https://www.canva.com/design/DAF36U9kpII/Jg2AtXaxoV168XggrdwFug/view" target="_blank" class="article-link">The Limfjord</a>
+            <a href="https://www.canva.com/design/DAF36e_y5yE/FS6uQjpVKI4v0K5gV37zQQ/view" target="_blank" class="article-link">Norway - East coast</a>
+            <a href="https://www.canva.com/design/DAF36XjVy3Y/cvE8sRcdJM2jgLVSDYR1dA/view" target="_blank" class="article-link"> Homeward bound - West coast Sweden</a>
+            <a href="https://www.canva.com/design/DAF36Tq0L8o/xY8LWaqBXXR0__0O886yMA/view" target="_blank" class="article-link">Denmark southwards</a>
+            <a href="https://www.canva.com/design/DAF36c8CIb8/URH01oCGNZ3kfUrGcZAjWg/view" target="_blank" class="article-link">Happy to be on Seawolf</a>
+            <a href="https://www.canva.com/design/DAF36XWqS8Y/C73au5uLxeTIPuAnTBdXLg/view" target="_blank" class="article-link">Cruising Europe</a>
+            <a href="https://www.canva.com/design/DAF36Xlun-8/dI3W6fuJaIdggq2L-G5zbw/view" target="_blank" class="article-link">Our last ever trip on seawolf</a>
+            <a href="https://www.canva.com/design/DAF4WsudUOg/LSSgar7GQhIxRSPy4lMhTw/view" target="_blank" class="article-link">Martin Broom memorial trophy 2023</a>
+            <a href="https://www.canva.com/design/DAGGExjpiqE/nM2_-wuHnCAHoyafzXHnVQ/view" target="_blank" class="article-link">Saying goodbye to seawolf</a>
+        </div>
+
+        <h2 class="section-title">🧭 Cruising Association Articles</h2>
+        <div class="grid">
+            <a href="https://www.canva.com/design/DAF3_VQzdJo/hG44KEmfd0cT9EzqAmdnzA/view" target="_blank" class="article-link">Winner of the fid trophy</a>
+            <a href="https://www.canva.com/design/DAF3_Xsjcik/FjEg-osXxxMEVOTZd722cg/view" target="_blank" class="article-link">Brussels to Paris - Inside Route</a>
+            <a href="https://www.canva.com/design/DAF3_fkGIYc/p4skHMg1DLJFgtcFOu9W1g/view" target="_blank" class="article-link">Europes most beautiful waterway</a>
+            <a href="https://www.canva.com/design/DAF3_ZoAMsI/bQzyw2vvXLISAKg9wJfc8Q/view" target="_blank" class="article-link">By boat to Basel - Rhine/Moselle</a>
+            <a href="https://www.canva.com/design/DAF3_WbFd0k/hZ11es0L6fs9R_9EgfMhQg/view" target="_blank" class="article-link">From Oslo to the Baltic - Gota canal</a>
+            <a href="https://www.canva.com/design/DAF3_VG13vA/AwlxHAzm51QxoULbUPl8AA/view" target="_blank" class="article-link">Grandchildren on board in Holland</a>
+            <a href="https://www.canva.com/design/DAF3_eryQcw/mfGPV_WpH4uhIWJEr8mtWg/view" target="_blank" class="article-link">European inland waterways</a>
+            <a href="https://www.canva.com/design/DAF3_eryQcw/mfGPV_WpH4uhIWJEr8mtWg/view" target="_blank" class="article-link">Our boating life</a>
+            <a href="https://www.canva.com/design/DAF3_e-ux5o/KGATrX4VHK8iQqIrw1sWvA/view" target="_blank" class="article-link">To Berlin in sheltered waters</a>
+            <a href="https://www.canva.com/design/DAF3_d0Cuo8/l--1YonlJlOwSRgF_yhx1w/view" target="_blank" class="article-link">Caption competition</a>
+            <a href="https://www.canva.com/design/DAF3_W3Ci2g/njY4r5jo2FvmHJOA0BI_FQ/view" target="_blank" class="article-link">Favourite stop - Mondoff</a>
+            <a href="https://www.canva.com/design/DAF3_b3FT7A/ZAroM9WSEk4i1rYmq3dgrA/view" target="_blank" class="article-link">Down the west coast of sweden</a>
+            <a href="https://www.canva.com/design/DAF3_RrMfDI/jFpIA-UDs7eovQaL3xuXoQ/view" target="_blank" class="article-link">Hamlets Castle - Stralsund</a>
+            <a href="https://www.canva.com/design/DAF3_VscByE/o9LldaFVnYeib2rniAwCDQ/view" target="_blank" class="article-link">Saving money - no home base</a>
+            <a href="https://www.canva.com/design/DAGGE7GaIEw/_Uykhp0KVUZaoUxdWw11FA/view" target="_blank" class="article-link">Goodbye Seawolf!</a>
+        </div>
+
+        <h2 class="section-title">🚤 Motor Boat Owners</h2>
+        <div class="grid">
+            <a href="https://www.canva.com/design/DAF4LbkgVPU/SOt9YguJFJXPBdD_AW-ahg/view" target="_blank" class="article-link">Motor Boat Inbox</a>
+            <a href="https://www.canva.com/design/DAF4LdBvD6w/yI8eIxAh-nR7d8a6PeR0aw/view" target="_blank" class="article-link">Norway bound: Elburg to Cuxhaven</a>
+            <a href="https://www.canva.com/design/DAF4LZ4Vy6A/uIVifexrWniEslKnyA36Tg/view" target="_blank" class="article-link">Norway bound: River Elbe</a>
+            <a href="https://www.canva.com/design/DAF4LdZCD0g/dnkDh3lbNK0u9oZVz9FQkQ/view" target="_blank" class="article-link">Norway bound: Kieler Forde</a>
+            <a href="https://www.canva.com/design/DAF4LaH8Y_k/4X1uj_f1fWZ9ogW0AoGOQw/view" target="_blank" class="article-link">Norway bound: East Denmark</a>
+            <a href="https://www.canva.com/design/DAF4LQQb0Eo/GcuJBN2wkG875IFKuAaJGg/view" target="_blank" class="article-link">Norway bound: The Limfjord</a>
+            <a href="https://www.canva.com/design/DAF4LfhYja4/R3VguRMmNda-yU32ul3ncw/view" target="_blank" class="article-link">Norway bound: Norway</a>
+            <a href="https://www.canva.com/design/DAF4LeFNNQ8/ydY6fyo9efBcFVzN4oCDjw/view" target="_blank" class="article-link">Homeward: West Sweden</a>
+            <a href="https://www.canva.com/design/DAF4LQB6t7I/wBLn4YGGxgIsZ6J0mmLrHA/view" target="_blank" class="article-link">Homeward: Denmark</a>
+            <a href="https://www.canva.com/design/DAF4LXEBg8o/AT3QWxsRpHDadDUkMr0IiA/view" target="_blank" class="article-link">Ijsselmeer</a>
+        </div>
+
+        <h2 class="section-title">🐚 Early Sundry Articles</h2>
+        <div class="grid">
+            <a href="https://www.canva.com/design/DAF4RyKdy_0/Wp8GKvtz4LcNRFH8dQcl4w/view" target="_blank" class="article-link">Seawolf entering Paris</a>
+            <a href="https://www.canva.com/design/DAF4R8cXPaI/5RRaH8IqihxtnJeIdktzxQ/view" target="_blank" class="article-link">France Atlantic coast</a>
+            <a href="https://www.canva.com/design/DAF4R6qwk9A/Zrngg7djx0MwauwhFrkcuw/view" target="_blank" class="article-link">Atlantic coast of France</a>
+            <a href="https://www.canva.com/design/DAF4RzTAcKs/NxIaWDe2BkA-wo6oLKaULw/view" target="_blank" class="article-link">St Helier boat owners - Rhine</a>
+            <a href="https://www.canva.com/design/DAF4R_qw7JY/Hvix7V2e6AIFAxpl0jTSiQ/view" target="_blank" class="article-link">Motorboat Monthly - West</a>
+            <a href="https://www.canva.com/design/DAF4RziwUmM/wOjOMlgs-YdhgOG4AmiYRw/view" target="_blank" class="article-link">Biscay Bay</a>
+            <a href="https://www.canva.com/design/DAF4RwjE15E/uEX25MMFxnRdBaorBXIFtQ/view" target="_blank" class="article-link">Broom - The Rhine</a>
+            <a href="https://www.canva.com/design/DAF4R4SUOkU/sowAVj75XTc-b1GiA3iylw/view" target="_blank" class="article-link">Broom Talk on cruises</a>
+            <a href="https://www.canva.com/design/DAF4R8Uq0ak/8hx5FdyBohcgFYonxL6nqw/view" target="_blank" class="article-link">Earls court show</a>
+            <a href="https://www.canva.com/design/DAF4R4vFZxs/SMYMV3dvQQroHqEamzhMXw/view" target="_blank" class="article-link">Motor boat viewpoint</a>
+        </div>
+
+        <section class="captain-log" style="margin-top: 80px;">
+            <h2 style="margin-top: 0;">📩 Contact the Captain</h2>
+            <p>Have a question about a specific route, or just want to say hello? Drop us a message below.</p>
+            
+            <form action="https://formspree.io/f/your-id" method="POST" class="contact-form">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+                
+                <button type="submit" class="gallery-btn" style="width: fit-content; align-self: center;">
+                    🚢 Send Message
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>Fair Winds and Following Seas</p>
+        <p>&copy; 2025 Peter and Gill Pitcher | Seawolf</p>
+    </footer>
+</div>
+
+<script>
+    // Search functionality
+    document.getElementById('articleSearch').addEventListener('keyup', function() {
+        let filter = this.value.toLowerCase();
+        let articles = document.querySelectorAll('.article-link');
+        let sections = document.querySelectorAll('.section-title');
+
+        articles.forEach(article => {
+            article.classList.toggle('hidden', !article.textContent.toLowerCase().includes(filter));
+        });
+
+        sections.forEach(section => {
+            let visible = section.nextElementSibling.querySelectorAll('.article-link:not(.hidden)').length;
+            section.classList.toggle('hidden', visible === 0 && filter !== "");
+        });
+    });
+</script>
+</body>
+</html>
