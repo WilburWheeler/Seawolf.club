@@ -62,9 +62,9 @@
             padding: 20px;
         }
 
-        /* Base style for boxes */
+        /* The Box Container */
         .captain-log {
-            background: rgba(253, 252, 240, 0.92);
+            background: rgba(253, 252, 240, 0.95);
             backdrop-filter: blur(5px);
             padding: 40px;
             border-radius: 25px;
@@ -72,14 +72,15 @@
             border: 1px solid rgba(212, 197, 161, 0.5);
             margin-bottom: 50px;
             position: relative;
+            line-height: 1.6;
+            overflow: hidden;
         }
 
-        /* NEW: Special styling for the top Bio section with the image background */
+        /* The Image Background with White Overlay */
         .bio-bg {
-            /* This creates a white overlay (0.85 opacity) ON TOP of your image */
-            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+            background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), 
                         url('top-photo.jpg') no-repeat center center;
-            background-size: cover; /* Ensures the photo covers the whole box */
+            background-size: cover;
             border: 2px solid white;
         }
 
@@ -109,7 +110,6 @@
             box-shadow: 0 8px 20px rgba(211,84,0,0.4);
         }
 
-        /* Form Styling */
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -201,14 +201,30 @@
 
     <div class="container">
         <section class="captain-log bio-bg">
-            <p>My wife, Gill and I, have spent the past thirty summers exploring on the power boats we have owned, one <strong>Birchwood</strong> and three <strong>Brooms</strong>. All were named <strong>Seawolf</strong>.</p>
-            <p>We have written many articles about our adventures, which we hope you will enjoy. The articles are divided into 4 sections below.</p>
+            <p>My wife, Gill and I, have spent the past thirty summers (Covid years excluded) exploring on the power boats we have owned, one Birchwood and three Brooms. All were named <strong>Seawolf</strong>.</p>
             
+            <p>In the early years, we mainly explored the west and north coast of France, but over recent years we have ventured further around the northern European coast and inland waterways.</p>
+            
+            <p>We have written many articles about our adventures, which we hope you will enjoy, especially if you are exploring these areas yourselves.</p>
+            
+            <p><strong>The articles are divided into 4 sections:</strong></p>
+            <ul>
+                <li>Articles published in the Broom Boat Owners magazine ‘Sweeping Statements’.</li>
+                <li>Articles published in the Cruising Association Magazine.</li>
+                <li>Articles published by the online magazine ‘Motor Boat Owners’, which is no longer in existence.</li>
+                <li>A selection of old articles and articles which have featured us in other media, showing our experiences on our different Seawolfs over the years and our general boating experiences.</li>
+            </ul>
+
+            <p>As members of both the Broom Boat Owners Association and Cruising Association we have received a great deal of assistance and information. We recommend membership to potential boat owners and European travelers.</p>
+            
+            <p>There is some duplication of articles, but the presentation and photographs differ. We hope you enjoy reading the articles as much as we have enjoyed sharing our experiences.</p>
+
             <div class="gallery-btn-wrapper">
                 <a href="gallery.html" class="gallery-btn">📸 View the Photo Gallery</a>
             </div>
 
-            <p style="font-family: 'Brush Script MT', cursive; font-size: 2rem; text-align: right; margin-bottom: 0;">Peter and Gill Pitcher</p>
+            <p style="font-family: 'Brush Script MT', cursive; font-size: 2.2rem; text-align: right; margin: 0; color: #d35400;">Peter and Gill Pitcher</p>
+            <p style="text-align: right; font-weight: bold; margin: 0; font-size: 1.2rem;">Seawolf</p>
         </section>
 
         <h2 class="section-title">⚓ Broom Boat Owners: 'Sweeping Statements'</h2>
@@ -288,18 +304,13 @@
 
         <section class="captain-log" style="margin-top: 80px;">
             <h2 style="margin-top: 0;">📩 Contact the Captain</h2>
-            <p>Have a question about a specific route, or just want to say hello? Drop us a message below.</p>
-            
             <form action="https://formspree.io/f/your-id" method="POST" class="contact-form">
                 <div class="form-row">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                 </div>
                 <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
-                
-                <button type="submit" class="gallery-btn" style="width: fit-content; align-self: center;">
-                    🚢 Send Message
-                </button>
+                <button type="submit" class="gallery-btn" style="width: fit-content; align-self: center;">🚢 Send Message</button>
             </form>
         </section>
     </div>
@@ -311,7 +322,6 @@
 </div>
 
 <script>
-    // Search functionality
     document.getElementById('articleSearch').addEventListener('keyup', function() {
         let filter = this.value.toLowerCase();
         let articles = document.querySelectorAll('.article-link');
