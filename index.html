@@ -22,20 +22,9 @@
 
         header {
             text-align: center;
-            padding: 40px 20px 20px 20px;
+            padding: 60px 20px 20px 20px;
             color: white;
             text-shadow: 3px 3px 0px #005073, 5px 5px 15px rgba(0,0,0,0.5);
-        }
-
-        /* NEW: Style for the top picture */
-        .header-image {
-            max-width: 100%; /* Responsive */
-            width: 700px;    /* Maximum width so it doesn't take over the whole screen */
-            height: auto;
-            border-radius: 20px; /* Rounded corners */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4); /* Nice shadow for depth */
-            border: 5px solid rgba(255, 255, 255, 0.8); /* White frame */
-            margin-bottom: 20px;
         }
 
         header h1 {
@@ -73,6 +62,7 @@
             padding: 20px;
         }
 
+        /* Base style for boxes */
         .captain-log {
             background: rgba(253, 252, 240, 0.92);
             backdrop-filter: blur(5px);
@@ -81,6 +71,16 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             border: 1px solid rgba(212, 197, 161, 0.5);
             margin-bottom: 50px;
+            position: relative;
+        }
+
+        /* NEW: Special styling for the top Bio section with the image background */
+        .bio-bg {
+            /* This creates a white overlay (0.85 opacity) ON TOP of your image */
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                        url('top-photo.jpg') no-repeat center center;
+            background-size: cover; /* Ensures the photo covers the whole box */
+            border: 2px solid white;
         }
 
         .gallery-btn-wrapper {
@@ -177,6 +177,7 @@
             margin-top: 80px;
         }
 
+        .ship-wheel { font-size: 50px; display: block; }
         .hidden { display: none !important; }
 
         @media (max-width: 600px) {
@@ -189,8 +190,7 @@
 
 <div class="overlay">
     <header>
-        <img src="top-photo.jpg" alt="Seawolf Boat" class="header-image">
-        
+        <span class="ship-wheel">☸</span>
         <h1>Seawolf</h1>
         <p style="font-size: 1.4rem;">The 30-Year Logbook of Peter & Gill Pitcher</p>
     </header>
@@ -200,7 +200,7 @@
     </div>
 
     <div class="container">
-        <section class="captain-log">
+        <section class="captain-log bio-bg">
             <p>My wife, Gill and I, have spent the past thirty summers exploring on the power boats we have owned, one <strong>Birchwood</strong> and three <strong>Brooms</strong>. All were named <strong>Seawolf</strong>.</p>
             <p>We have written many articles about our adventures, which we hope you will enjoy. The articles are divided into 4 sections below.</p>
             
